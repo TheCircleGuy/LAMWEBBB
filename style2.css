@@ -141,6 +141,13 @@
     margin: 2px 0;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+  }
+  
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-list {
