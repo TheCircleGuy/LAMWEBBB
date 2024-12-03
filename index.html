@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Làm Web - với tụi mình nha</title>
+    <link rel="icon" type="image/x-icon" href="/fav.png">
     <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" name="description">
     <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="og:title">
     <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="og:description">
@@ -15,6 +16,13 @@
     
 
     <!-- FONT -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anta&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
@@ -38,7 +46,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-    <script type="text/javascript" src="main.js"></script>
 </head>
 
 
@@ -50,19 +57,30 @@
     <div class="arrow up"></div>
   </button>
 
-  <nav class="navbar">
-    <div class="navbar-left">
-      <span class="brand-name">Làm Web</span>
-    </div>
-    <div class="navbar-center">
-      <a href="#">Dự Án</a>
-    </div>
-    <div class="navbar-right">
-      <a href="https://www.instagram.com/tuilamweb/" target="_blank" class="try-now">
-        <img src="/media/instagram.svg" alt="Instagram" class="chrome-icon"> Nhắn Insta
-      </a>
-    </div>
+  <nav class="custom-navbar">
+    <!-- Text: Lam -->
+     
+    <span class="nav-text">LÀM</span>
+  
+    <!-- Button: Du An -->
+    <button onclick="scrollToProject()" class="nav-button">DỰ ÁN</button>
+  
+    <!-- Text: Web -->
+    <span class="nav-text">WEB</span>
+  
+    <!-- Instagram Group -->
+
+    <a href="https://ig.me/m/tuilamweb" target="_blank" class="instagram-group">
+      <img src="inslogo.png" alt="Instagram Logo" class="instagram-logo" />
+      <img src="nhantin.png" alt="Overlay Icon" class="instagram-overlay" />
+    </a>
+    
+  
   </nav>
+  
+
+
+  
   <script>
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -76,48 +94,85 @@
   
 <div></div>
 
+
+
+
 <section class="center-section">
+
   <div class="center-header">
-    <h1>TỤI MÌNH LÀM WEB Đẹp</h1>
-    <p>Digital Portfolio | Landing Page | Product Page | FnB | Homestay </p>
-    <h2>Free hosting 1 năm luôn !</h2>
-    <a href="https://www.instagram.com/tuilamweb/" target="_blank" class="cta-button">👌 Đá Cái Hẹn <br> Có Web ngon</a>
+    <h2>TỤI MÌNH</h2>
+    <h1>
+      LÀM 
+      <span class="web-container">
+        WEB
+        <img src="depwhite.png" alt="Decorative" class="decorative-img">
+      </span>
+    </h1>
+    <p>Digital Portfolio | Landing Page | Product Page | FnB | Homestay</p>
+    <h2>Free hosting 1 năm lun nhooo!</h2>
+    <a href="https://www.instagram.com/tuilamweb/" ><img class="cta-img" src="ctabtn2.png" alt="CTA Speech Bubble"></a>
   </div>
+  
+    <span class="highlight-box green">Game Nô-en zui mời bạn chơi (con mèo bên trái)</span>
+    
+  <div class="container">
+    
+    <div class="box">
+        <h2 class="name">Game zô tri</h2>
+        <a href="/memgame.html"class="buy">Cây Thông</a>
+        <a href="/memgame.html">
+          <img src="/meo.png" class="product" alt="Product Image">
+      </a>
+      
+    </div>
+    <div class="box">
+        <h2 class="name">Christmas Gift</h2>
+        <a href="/memgame.html"class="buy"> Hộp quà </a>
+        <a href="/memgame.html">
+          <img src="/meo2.png" class="product" alt="Product Image">
+      </a>
+      
+    </div>
+  </div>
+
+  
+
   <div class="cards-container">
     <!-- Online Store Card -->
     <div class="card blue">
       <div class="svg-bg"></div>
-      <h2>Portfolio</h2>
+      <h2></h2>
       <!-- <p>Sell anything. Upload your content and leave the hosting, checkout, and delivery to us.</p> -->
     </div>
     <!-- Website Card -->
     <div class="card orange">
       <div class="svg-bg"></div>
-      <h2>Landing Page</h2>
+      <h2></h2>
       <!-- <p>Build a beautiful website in less than 10 minutes with professionally designed templates.</p> -->
     </div>
     <!-- Email Marketing Card -->
     <div class="card purple">
       <div class="svg-bg"></div>
-      <h2>Bán Hàng</h2>
+      <h2></h2>
       <!-- <p>Beautiful email marketing that works perfectly with your online store and website.</p> -->
     </div>
   </div>
 </section>
 
+
 <section class="highlight-section">
   <p class="highlight-text">
-    Muốn <strong>Làm Web Đẹp</strong> Thì phải có.
+    Muốn <strong class="rotate-on-hover">Làm Web</strong>  đẹp thì phải có.
   </p>
   <div class="arrow">
-    <img src="arrow.png" />
+    <img src="7.png" alt="Arrow pointing down" />
   </div>
   <div class="highlight-words">
     <p>Quan trọng phải nhắc một lần</p>
     <div class="highlight-options">
-      <span class="highlight-box yellow">Storytelling</span>
+      <span class="highlight-box green">Storytelling</span>
       <span class="highlight-box green">Hiểu Người Xem</span>
-      <span class="highlight-box lime">Đẹp</span>
+      <span class="highlight-box green">Đẹp</span>
     </div>
     <div class="additional-info">
       <span>Layout</span>
@@ -128,9 +183,11 @@
   </div>
 </section>
 
+
 <section class="threads-section">
   <div class="threads-card">
-    <h2>Check INSTA tụi mình</h2>
+    
+    <h2>Check IG tụi mình nhá 🤟</h2>
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCjNz7nhQ8P/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DCjNz7nhQ8P/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DCjNz7nhQ8P/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Tụi mình Làm Web (@tuilamweb)</a></p></div></blockquote>
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
@@ -138,21 +195,70 @@
 
 
 
-<section class="info-section">
-  <div class="info-box">
-    <h3 class="info-title">Storytelling</h3>
-    <p class="info-description">Mỗi chiếc web là một câu chuyện. Bạn là người kể chuyện. Hãy để tụi mình giúp bạn kể chuyện hay hơn</p>
+<section class="feature-layout">
+  <!-- Left Large Card -->
+  <div class="feature-card-large">
+    <div class="dynamic-cards">
+      <div class="small-card active">
+        <span class="small-card-icon">💸</span>
+        <div class="small-card-content">
+          <p class="small-card-title">Thanh toán online</p>
+        </div>
+      </div>
+      <div class="small-card">
+        <span class="small-card-icon">🗓️</span>
+        <div class="small-card-content">
+          <p class="small-card-title">Book & quản lý lịch</p>
+        </div>
+      </div>
+      <div class="small-card">
+        <span class="small-card-icon">🌈</span>
+        <div class="small-card-content">
+          <p class="small-card-title">Graphical Video</p>
+        </div>
+      </div>
+    </div>
+    <div class="feature-content">
+      <p class="feature-subtitle">Functions</p>
+      <h2>Chức năng bạn nên có thêm cho web đẹp của mình</h2>
+    </div>
   </div>
-  <div class="info-box ">
-    <h3 class="info-title">Hiểu_người_xem</h3>
-    <p class="info-description">Câu chuyện chỉ hay khi người nghe hiểu được câu chuyện. "Death of the author"_Roland Barthes
-    </p>
-  </div>
-  <div class="info-box">
-    <h3 class="info-title">Đẹp</h3>
-    <p class="info-description">Dĩ nhiên là phải đẹp</p>
+
+  <!-- Right Small Card with Video -->
+  <div class="feature-card-small">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="lwanimate.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
   </div>
 </section>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".small-card");
+  let activeIndex = 0;
+
+  const rotateCards = () => {
+    // Remove active class from all cards
+    cards.forEach((card) => card.classList.remove("active"));
+
+    // Add active class to the current card
+    cards[activeIndex].classList.add("active");
+
+    // Increment the index
+    activeIndex = (activeIndex + 1) % cards.length;
+  };
+
+  // Rotate cards every 3 seconds
+  setInterval(rotateCards, 1000);
+});
+
+</script>
 
 <section class="feature-grid-section">
   <!-- Tools Card -->
@@ -171,160 +277,139 @@
 
   <!-- Progress Card -->
   <div class="feature-grid-card feature-grid-card-progress">
-    <h3>Chức năng tụi mình có thể làm cho bạn</h3>
+    <h3>Làm việc với tụi mình, bạn nhận được</h3>
     <div class="feature-status-list">
-      <span class="feature-status">Thanh toán online</span>
-      <span class="feature-status ">Check lịch</span>
-      <span class="feature-status ">Đặt lịch</span>
-      <span class="feature-status ">Web app</span>
-      <span class="feature-status ">IOS minor app</span>
+      <span class="feature-status">4 lần reviews</span>
+      <span class="feature-status ">1 giờ Brainstorm trực tiếp với team</span>
+      <span class="feature-status ">Discount gói brand guideline</span>
+      <span class="feature-status ">Free hosting 1 năm</span>
+      <span class="feature-status ">Tặng 1 combo Video/Animation</span>
     </div>
   </div>
 
   <!-- AI Features Card -->
   <div class="feature-grid-card feature-grid-card-ai">
-    <h3>Đang ráng thêm Chatgpt zo web của bạn</h3>
+    <div class="color_black">Ngoài ra tụi mình còn có các packages đi kèm (nếu bạn chưa có)</div>
     <div class="feature-ai-list">
-      <div class="feature-ai-item">Cho ngầu 👎</div>
-      <div class="feature-ai-item">Cho xịn 🔥</div>
+      <div class="feature-ai-item">PAX VIDEO</div>
+      <div class="feature-ai-item">PAX ANIMATED ELEMENTS</div>
+      <div class="feature-ai-item">PAX BRAND GUIDELINE</div>
+      <div class="feature-ai-item">PAX HÌNH ẢNH</div>
+      <div class="feature-ai-item">PAX GRAPHICAL ASSETS 🔥</div>
     </div>
   </div>
 
   <!-- Pricing Card -->
   <div class="feature-grid-card feature-grid-card-pricing">
     <h3>Nói chuyện thêm với tụi mình</h3>
-    <button href="https://www.threads.net/@tuilamweb?xmt=AQGzSawROF_1KGyu3Zdhrjzhs8hspss60ZHHFmJds8evcQ" class="feature-pricing-button">→</button>
+    <img href="https://www.instagram.com/tuilamweb/" class="feature-pricing-button" src="inslogo.png">
+
   </div>
 </section>
 
-<section id="projects" class="projects-section">
-  <div class="projects-container">
-    <h2 class="projects-heading">Dự Án</h2>
-
-    <!-- Project 1 -->
-    <div class="project-horizontal-box-3">
-      <div class="project-text">
-        <h3 class="project-title">Get.Smarty.IO</h3>
-        <p class="project-description">
-          Landing Page của một startup FnB ở Nam Phi, (tụi tui đang được employed ở đây hehe)
-        </p>
-      </div>
-      <div class="project-media">
-        <video autoplay loop muted playsinline class="project-video">
-          <source src="/media/Smartfood.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+<section class="vertical-container">
+  <h2  id="project" class="projects-heading">Dự Án</h2>
+  <div class="section">
+    <iframe class="image-container" src="https://smartfoods.co.za/"  title="Iframe Example"></iframe>
+    <div class="text-container">
+      <h2>Getsmarty.IO</h2>
+      <p>Landing Page của một startup FnB ở Nam Phi, (tụi tui đang được employed ở đây hehe)</p>
+  
     </div>
+  </div>
+  <div class="section">
+    <div class="text-container">
+      <h2>Dias Advisors</h2>
+      <p>Sell courses, downloads, memberships, tickets, coaching, or any other digital product. Podia makes it simple.</p>
 
-    <!-- Project 2 -->
-    <div class="project-horizontal-box-4">
-     
-      <div class="project-media">
-        <video autoplay loop muted playsinline class="project-video">
-          <source src="/media/Foxtopia.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="project-text">
-        <h3 class="project-title">Foxtopia</h3>
-        <p class="project-description">
-        An NFT collection on Solana
-        </p>
-      </div>
     </div>
-
-
-    <!-- Project 3 -->
-    <div class="project-horizontal-box-1 ">
-      <div class="project-text">
-        <h3 class="project-title">Lymo One</h3>
-        <p class="project-description">Product page cho một hãng máy cắt cỏ Mỹ</p>
-      </div>
-      <div class="project-media">
-        <video autoplay loop muted playsinline class="project-video">
-          <source src="media/lymow.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-horizontal-box-2 reverse ">
-      <div class="project-media">
-        <video autoplay loop muted playsinline class="project-video">
-          <source src="media/DiasAdvisory.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="project-text">
-        <h3 class="project-title">Dias Advisors</h3>
-        <p class="project-description">Landing page của Dias Advisory</p>
-      </div>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project-horizontal-box-4">
-      <div class="project-text">
-        <h3 class="project-title">JennyLe.io</h3>
-        <p class="project-description">Portfolio đi du học ngành art của bạn Jenny Lê</p>
-      </div>
-      <div class="project-media">
-        <video autoplay loop muted playsinline class="project-video">
-          <source src="media/portfo.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
+   
+      <iframe class="image-container" src="https://eggcellent.mosesmawuru.pro/"  title="Iframe Example"></iframe>
    
   </div>
-</section>
+  <div class="section">
+ 
+    <video autoplay loop muted playsinline  class="image-container">
+      <source  src="/media/Foxtopia.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+      <h2>Foxtopia</h2>
+      <p> An NFT collection on Solana</p>
 
-
-
-<section class="cta-section">
-  <div class="cta-container">
-    <div class="cta-text">
-      <h2 class="cta-heading">Bạn đã đọc tới đây rồi thì!</h2>
-      <p class="cta-subheading">Đá cái hẹn bên INSTA. Có Web ngon.</p>
-    </div>
-    <div class="cta-button-wrapper">
-      <a href="https://www.instagram.com" class="cta-instagram-button" target="_blank">
-        <img src="/media/instagram.svg" alt="Instagram" class="instagram-logo">
-      </a>
     </div>
   </div>
+
+  <div class="section">
+    <div class="text-container">
+      <h2>Dias Advisors</h2>
+      <p>Landing page của Dias Advisory.</p>
+
+    </div>
+    <iframe class="image-container" src="https://www.dias-advisors.com/"  title="Iframe Example"></iframe>
+  </div>
+  <div class="section">
+    <video autoplay loop muted playsinline  class="image-container">
+      <source  src="/media/lymow.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+      <h2>Lymo One</h2>
+      <p>Product page cho một hãng máy cắt cỏ Mỹ</p>
+
+    </div>
+  </div>
+  <div class="section">
+    <div class="text-container">
+      <h2>JennyLe.io</h2>
+      <p>Portfolio đi du học ngành art của bạn Jenny Lê</p>
+
+    </div>
+    <div class="image-container" >
+      <img src="JennyPort.png" alt="Image 2">
+    </div>
+  </div>
+  <div class="section">
+    <iframe class="image-container" src="https://jaysoncaspertrading.com/"  title=""></iframe>
+    <div class="text-container">
+      <h2>Jayson Casper</h2>
+      <p>Page bán trading course của một cha phím kèo. Phím cũng oke</p>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text-container">
+      <h2>Love Monsters</h2>
+      <p>Landing of a Crypto Gamfi</p>
+
+    </div>
+    <iframe class="image-container" src="https://playlovemonster.com/"  title="Iframe Example"></iframe>
+  </div>
+  
 </section>
 
 
 
 
+<footer class="footer">
+  <div class="footer-box">
+    
+    <h2>LÀM WEB</h2>
+    <p>Với Tụi Mình Nha!</p>
+    <div class="button-group">
+      <a href="https://ig.me/m/tuilamweb" target="_blank" class="instagram-group1">
+        <img src="inslogo.png" alt="Instagram Logo" class="instagram-logo1" />
+        <img src="nhantin.png" alt="Overlay Icon" class="instagram-overlay1" />
+      </a>
+    </div>
+    
+  </div>
+  
+</footer>
 
 
-<!--Waves Container-->
-<!-- CSS Waves from goodkatz (https://codepen.io/goodkatz/pen/LYPGxQz) -->
-<div>
-  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-</g>
-</svg>
-</div> -->
-<!--Waves end-->
-
-
-
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 
@@ -413,6 +498,12 @@ function playVideo() {
           });
       }
   });
+
+  function scrollToProject() {
+  const target = document.getElementById("project");
+  target.scrollIntoView({ behavior: "smooth" });
+}
+
 </script>
 
 
@@ -422,9 +513,12 @@ function playVideo() {
 <section id="form" class="form-section">
   <h2 class="form-title" >@LAMWEB.AGENCY</h2>
   <h2 class="form-title" >2025</h2>
+
+<!--Waves Container-->
 </section>
 
 
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>

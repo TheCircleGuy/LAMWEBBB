@@ -1,97 +1,104 @@
+@font-face {
+  font-family: 'DFVNConstructioGrotesk'; /* Define a name for the font */
+  src: url('/DFVN\ Constructio\ Grotesk.ttf') format('truetype'); /* Specify the font file path and format */
+  font-weight: normal; /* Optional: specify font weight */
+  font-style: normal;  /* Optional: specify font style */
+}
 
+/* Navbar container */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 25px;
-    padding: 0.8rem 1.5rem;
-    margin-top: 5rem;
-    max-width: 40%;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
-    position: sticky; /* Keeps the navbar fixed at the top */
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out; /* Smooth animation when scrolling */
+.custom-navbar {
+  width: 35%; /* Navbar width remains 35% */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #CDFF3C;
+  border-radius: 100px;
+  max-height: 4rem;
+  z-index: 1000;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Sticks to the top */
+  left: 50%; /* Centers horizontally */
+  transform: translateX(-50%); /* Adjusts to the center */
+  margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .custom-navbar {
+    width: 50%; /* Increase the width to 50% for devices narrower than 1024px */
   }
-  
-  .navbar.scrolled {
-    background-color: #eaeaea; /* Changes background color when scrolling */
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px; /* Adds a stronger shadow */
-  }
-  
-  .navbar-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 24px;
-    margin-right: 8px;
-  }
-  
-  .brand-name {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .navbar-center a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  
-  .navbar-center a:hover {
-    color: #67bfa4;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .try-now {
-    display: flex;
-    align-items: center;
-    background-color: #d0d0d0;
-    border: none;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    font-size: 1.0rem;
-    font-weight: 900;
-    color: #333;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .try-now img {
-    height: 16px;
-    margin-right: 5px;
-  }
-  
-  .try-now:hover {
-    background-color: #d0a0d0;
-  }
+}
 
 @media (max-width: 768px) {
-    .logo {
-        padding-left: 0; /* Remove the left padding on smaller screens */
-        display: block;
-        margin: 0 auto; /* This will center the logo horizontally */
-        text-align: center; /* In case the logo is inline */
-    }
+  .custom-navbar {
+    display: none; /* Hide navbar on devices narrower than 768px */
+  }
 }
+
+/* Text styling */
+.nav-text {
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+  font-size: 1.5rem;
+  color: #13533E; /* Color for text */
+}
+
+/* Button styling */
+.nav-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #13533E; /* Background color for the button */
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Rounded corners for the button */
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+}
+
+.nav-button:hover {
+  background-color: #0A3324; /* Darker green on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Instagram Group */
+.instagram-group {
+  position: sticky;
+  width: 80px; /* Fixed width for the Instagram icon */
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.instagram-logo, .instagram-overlay {
+  margin-left: 0.3rem;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+
+.instagram-overlay {
+  transition: transform 0.3s ease; /* Smooth rotation effect on hover */
+}
+
+.instagram-group:hover .instagram-overlay {
+  transform: rotate(20deg); /* Rotate overlay icon on hover */
+}
+
 
 .cta-button-primary-menu, .cta-button-secondary {
     padding: 15px 30px;
     font-size: 24px;
     border-radius: 55px;
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -142,7 +149,7 @@
 }
 
 @media (max-width: 768px) {
-    .navbar {
+    .custom-navbar {
       display: none;
     }
   }
@@ -176,7 +183,7 @@
 }
 
 body {
-  font-family: "Phudu", sans-serif;
+  font-family: "Montserrat", serif;
   background-image: url('bg.png');
 }
 .landing-section {
@@ -208,13 +215,13 @@ body {
     align-items: center;
     gap: 5px;
     font-weight: 500;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     
 }
 
 .stat-item i {
     color: #000;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
 }
 
 .title {
@@ -223,7 +230,7 @@ body {
     color: #000;
     margin-bottom: 20px;
     line-height: 1.4;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
 }
 
 .subtitle {
@@ -233,7 +240,7 @@ body {
     color: #777;
     margin-bottom: 30px;
     max-width: 600px;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
 }
 
 .cta-buttons {
@@ -402,7 +409,7 @@ body {
 
 /* Text styling inside the boxes */
 .at-icon-box-text {
-   font-family: "Phudu", sans-serif;
+   font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-weight: 600;
     font-size: 24px;
     color: #333;
@@ -528,7 +535,7 @@ body {
 
 /* Styling for the green stroke buttons */
 .green-stroke-button {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 16px;
     border: 2px solid #093c29;
     background-color: transparent;
@@ -615,7 +622,7 @@ body {
 }
 
 .skills-header {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #000;
@@ -623,7 +630,7 @@ body {
 }
 
 .skills-subtitle {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #555;
@@ -643,7 +650,7 @@ body {
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 55px;
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -681,7 +688,7 @@ body {
 .cta-icon-item {
     display: flex;
     align-items: center;
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     color: #333;
 }
 
@@ -803,7 +810,7 @@ body {
 }
 
 .industry-problems-title {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #2d945b; /* Green color */
@@ -925,7 +932,7 @@ body {
 }
 
 .section-main-title {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #0bbef3; /* Green color */
@@ -934,7 +941,7 @@ body {
 }
 
 .section-description {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 16px;
     color: #777;
     margin-bottom: 40px;
@@ -947,20 +954,21 @@ body {
 .form-section {
     /* margin-top: 10rem; */
     text-align: center;
-    padding: 50px 20px;
-    background-color: #abd9ff;
+    padding: 10px 20px;
+    background-color: transparent;
 }
 
 .form-title {
     font-size: 24px;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-weight: 700;
-    color: black;
+    color: #CDFF3C;
     margin-bottom: 10px;
+    letter-spacing: 0.4rem; 
 }
 
 .form-subtitle {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 24px;
     font-weight: 600;
     color: #ffffff;
@@ -976,7 +984,7 @@ body {
 }
 
 .form-input {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #54BF9F;
@@ -990,7 +998,7 @@ body {
 }
 
 .form-submit {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     padding: 10px 20px;
     font-size: 14px;
     background-color: #ffffff;
@@ -1138,7 +1146,7 @@ figure {
 }
 
 .left-subtitle {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -1158,7 +1166,7 @@ figure {
 }
 
 .text-title {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #000;
@@ -1221,7 +1229,7 @@ figure {
 }
 
 .right-subtitle {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -1254,7 +1262,7 @@ figure {
 }
 
 .info-box h4 {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #333;
@@ -1262,7 +1270,7 @@ figure {
 }
 
 .info-box p {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 14px;
     color: #555;
     line-height: 1.4;
@@ -1270,7 +1278,7 @@ figure {
 }
 
 .learn-more {
-  font-family: "Phudu", sans-serif;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
@@ -1498,7 +1506,7 @@ figure {
 .feature p {
     font-size: 18px;
     margin-top: 10px;
-   font-family: "Phudu", sans-serif;
+   font-family: 'DFVNConstructioGrotesk', sans-serif;
 }
 
 @media (max-width: 1024px) {
@@ -1545,53 +1553,101 @@ figure {
 
 /* General Section Styles */
 .center-section {
-    text-align: center;
-    padding: 50px 20px;
-   
-    /* background-color: #f9f9f9; */
-  }
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 5rem;
+  background-color: transparent; /* Dark green background */
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+}
+
+/* Header Styling */
+.center-header h1 {
+  font-size: 7rem;
+  color: #CDFF3C; /* Bright yellow-green text */
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.4rem; 
+}
+
+.center-header h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 0.2rem; 
+
+}
+
+.center-header p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: white; /* Light gray for contrast */
+  font-family: 'urbanist', sans-serif;
+}
+
+/* Positioning and Animating "WEB" */
+.web-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer; /* Show pointer on hover */
+}
+
+.decorative-img {
+  position: absolute;
+  top: -40px; /* Adjust the position above "WEB" */
+  right: -50px; /* Adjust to the right of the "WEB" text */
+  transform: scale(2.5) rotate(20deg); /* Default scale */
+  transition: transform 0.3s ease, top 0.3s ease; /* Smooth hover animation */
+  width: 80px; /* Adjust size */
+ 
+}
+
+.web-container:hover .decorative-img {
+  transform: scale(2.5) rotate(10deg); /* Slightly enlarge */
+  top: -35px; /* Move up a bit more */
   
-  /* Header Styling */
+}
+
+/* CTA Image Styles */
+.cta-img {
+  /* max-width: 200%; */
+  margin-top: 2px;
+  transition: scale(2) transform 0.3s ease, filter 0.3s ease; /* Smooth animation */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); /* Subtle shadow */
+}
+
+.cta-img:hover {
+  transform: scale(1.1) rotate(3deg); /* Scale and tilt on hover */
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.5)); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .center-header h1 {
-    font-size: 4.5rem;
-    font-weight: BLACK;
-    margin-bottom: 5px;
+    font-size: 5rem;
   }
-  
+
+  .center-header h2 {
+    font-size: 2.5rem;
+  }
+
   .center-header p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #555;
-    font-family: "Phudu", sans-serif;
   }
-  
-  .cta-button {
-    display: inline-block;
-    background-color: #5bc6ff;
-    color: black;
-    font-weight: 600;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 25px;
+
+  .decorative-img {
+    width: 60px; /* Smaller image for smaller screens */
   }
-  
-  .cta-button:hover {
-    background-color: #a0deff;
-    transform: translateY(-3px); /* Lift the button slightly on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+
+  .cta-img {
+    max-width: 12rem;
   }
-  
-  .cta-button:active {
-    background-color: #4ab0e0; /* Slightly darker color on click */
-    transform: translateY(2px); /* Move the button down slightly */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); /* Reduce shadow */
-  }
-  
-  
+}
+
   /* Cards Section */
   .cards-container {
     display: flex;
@@ -1606,9 +1662,9 @@ figure {
     flex: 1;
     min-width: 100px;
     max-width: 350px;
-    min-height: 400px;
+    min-height: 350px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 100px  ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
     text-align: left;
@@ -1656,17 +1712,17 @@ figure {
   
   /* Card Colors */
   .card.blue {
-    background-color: #5a9bd4;
+    background-color: transparent;
     background-image: url('1.png');
   }
   
   .card.orange {
-    background-color: #ffb74d;
+    background-color: transparent;
     background-image: url('2.png');
   }
   
   .card.purple {
-    background-color: #ab47bc;
+    background-color: transparent;
     background-image: url('3.png');
   }
   
@@ -1750,79 +1806,165 @@ figure {
     .info-box {
       text-align: center;
     }
+  }/* General Section Styling */
+.highlight-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 800px;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+}
+
+/* Highlight Text */
+.highlight-text {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.highlight-text strong {
+  font-weight: bold;
+  display: inline-block; /* Ensures the rotation respects the text block */
+  transition: transform 0.3s ease; /* Smooth rotation animation */
+  color: #CDFF3C;
+}
+
+.rotate-on-hover:hover {
+  transform: rotate(-4deg); /* Rotate by 10 degrees */
+}
+
+/* Arrow Styling */
+.arrow img {
+  margin: 1rem auto;
+  height: 100px;
+  display: block;
+}
+
+/* Highlight Words */
+.highlight-words p {
+  font-size: 1.5rem;
+  color: #CDFF3C; /* Bright lime color */
+  margin-bottom: 2rem;
+}
+
+/* Options Box Styling */
+.highlight-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 2rem; /* Space between boxes */
+  margin-bottom: 2rem;
+}
+
+.highlight-box {
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+  min-width: 10rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.highlight-box.green {
+  background-color: #CDFF3C; /* Bright lime green */
+  color: #1a5136; /* Dark text for contrast */
+}
+
+.highlight-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  transform: scale(1.05) rotate(3deg); /* Subtle zoom effect */
+}
+
+/* Additional Info Styling */
+.additional-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.additional-info span {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .highlight-text {
+    font-size: 1.8rem;
   }
 
-  .highlight-section {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: transparent;
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  
-  .highlight-text {
-    font-size: 2.2rem;
-    color: #333;
-    font-weight: normal;
-  }
-  
-  .highlight-text strong {
-    font-weight: bold;
-  }
-  
   .arrow img {
-    margin: rem auto;
-    height: 30px;
+    height: 80px;
   }
-  
+
   .highlight-words p {
-    font-size: 1.5rem;
-    color: #888;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
   }
-  
-  .highlight-options {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
+
   .highlight-box {
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    min-width: 8rem;
   }
-  
-  .highlight-box.yellow {
-    background-color: #ffef82;
-    color: #333;
+
+  .additional-info span {
+    font-size: 0.9rem;
   }
-  
-  .highlight-box.green {
-    background-color: #9fffe0;
-    color: #333;
+}
+
+@media (max-width: 480px) {
+  .highlight-text {
+    font-size: 1.5rem;
   }
-  
-  .highlight-box.lime {
-    background-color: #b2fba5;
-    color: #333;
+
+  .arrow img {
+    height: 60px;
   }
-  
-  .highlight-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+
+  .highlight-words p {
+    font-size: 1.1rem;
   }
+
+  .highlight-box {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    min-width: 6rem;
+  }
+
+  .additional-info span {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+
+/* Additional Info Styling */
+.additional-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: #ffffff; /* White text */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
   
   .additional-info {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    font-size: 0.9rem;
-    color: #333;
-    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: lighter;
   }
   
   .additional-info span {
@@ -1831,7 +1973,7 @@ figure {
   }
   
   .additional-info span:hover {
-    color: #67bfa4;
+    color: #82ffa1;
   }
 
 
@@ -1851,21 +1993,36 @@ figure {
   text-align: center;
   color: #fff;
 }
+.feature-grid-card h3{
+ color: #CDFF3C;
+}
 
+.feature-grid-card h3 {
+  color: #CDFF3C;
+  
+}
+
+/* Specific rule for h3 with the .color_black class */
+.color_black {
+  color: #000; /* Black color */
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 .feature-grid-card-tools {
-  background-color: #add8e6;
+  background-color: #3d7645;
 }
 
 .feature-grid-card-progress {
-  background-color: #87cefa;
+  background-color: #3d7645;
 }
 
 .feature-grid-card-ai {
-  background-color: #dda0dd;
+  background-color: #CDFF3C;
 }
 
 .feature-grid-card-pricing {
-  background-color: #333;
+  background-color: #0c110c;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -1878,12 +2035,20 @@ figure {
   display: inline-block;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  background-color: #fff;
-  color: #333;
+  background-color: #CDFF3C;
+  color: #0c0909;
   border-radius: 8px;
   font-size: 0.8rem;
   font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth animation */
 }
+
+.feature-ai-item:hover {
+  transform: rotate(-2deg) scale(1.05); /* Add a slight zoom effect */
+  background-color: #2b5330; /* Optional background color change on hover */
+  color: #ffffff; /* Optional text color change on hover */
+}
+
 
 .feature-tool-icons {
   display: flex;
@@ -1905,7 +2070,7 @@ figure {
 }
 
 .feature-pricing-button {
-  background-color: #fff;
+  background-color: #CDFF3C;
   color: #333;
   border: none;
   font-size: 1.2rem;
@@ -1913,10 +2078,14 @@ figure {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease, top 0.3s ease;
+  /* text-decoration: none; */
 }
 
 .feature-pricing-button:hover {
-  background-color: #f9f9f9;
+  background-color: #CDFF3C;
+  transform: scale(1.2) rotate(20deg); /* Default scale */
+  transition: transform 0.3s ease, top 0.3s ease;
 }
 
 .feature-ai-list {
@@ -1926,10 +2095,16 @@ figure {
 .feature-ai-item {
   margin: 0.5rem 0;
   padding: 0.8rem 1rem;
-  background-color: #fff;
+  background-color: transparent;
+  border-color: #13533E;
+  border: 10cap solid 13533E;
   color: #333;
   border-radius: 8px;
   font-size: 0.9rem;
+
+  border: 2px solid #13533E; /* Border with specified color and width */
+  color: #333; /* Text color */
+  border-radius: 8px;
 }
 
 /* Responsive Design */
@@ -1938,41 +2113,65 @@ figure {
     grid-template-columns: 1fr;
   }
 }
-
-
 .threads-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-color: transparent;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent;
+}
+
+.instagram-media {
+  border-radius: 50px;
+}
+
+.threads-card {
+  background-color: #a6f73c;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.threads-card h2 {
+  font-size: 1.5rem;
+  color: #0d3b14;
+  margin-bottom: 0.8rem;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+  font-weight: 100;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .threads-card {
-    background-color: #f9f9f9;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
-    padding: 1.5rem;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
+      padding: 1rem;
   }
-  
+
   .threads-card h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+      font-size: 1.2rem;
   }
-  
-  .threads-iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .threads-section {
+      padding: 1rem;
   }
+
+  .threads-card {
+      padding: 0.5rem;
+  }
+
+  .threads-card h2 {
+      font-size: 1rem;
+  }
+}
+
 
   .projects-section {
-    background-color: #f9f9f9;
+    background-color: transparent;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     padding: 2rem 0;
   }
   
@@ -1984,29 +2183,32 @@ figure {
   .projects-heading {
     text-align: center;
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 2rem;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
+    letter-spacing: 0.25rem;
   }
   
   .project-horizontal-box-1 {
-    font-family: "Phudu", sans-serif;
+    font-family: "Montserrat", serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffa9a9;
+    background-color: #CDFF3C;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
   }
 
   .project-horizontal-box-2 {
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #a0ffcf;
+    background-color: #CDFF3C;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
     padding: 1.5rem;
@@ -2015,11 +2217,11 @@ figure {
   }
 
   .project-horizontal-box-3 {
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffe16d;
+    background-color: #CDFF3C;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
     padding: 1.5rem;
@@ -2027,11 +2229,11 @@ figure {
     overflow: hidden;
   }
   .project-horizontal-box-4 {
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #9db2ff;
+    background-color: #CDFF3C;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
     padding: 1.5rem;
@@ -2047,7 +2249,7 @@ figure {
   }
   
   .project-text {
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     color: black;
     flex: 1;
     padding: 1rem;
@@ -2062,7 +2264,9 @@ figure {
   
   .project-description {
     font-size: 1rem;
-    color: #666;
+    color: #000000;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
   }
   
   .project-media {
@@ -2116,7 +2320,7 @@ figure {
   .cta-text {
     flex: 1;
     padding-right: 1rem;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
     font-weight: 600px;
   }
   
@@ -2125,7 +2329,7 @@ figure {
     color: black;
     font-weight: bold;
     margin: 0;
-    font-family: "Phudu", sans-serif;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
   }
   
   .cta-subheading {
@@ -2192,4 +2396,491 @@ figure {
     }
   
     .cta-button
+  }/* General Layout Styling */
+.feature-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: transparent; /* Transparent background */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Left Large Card */
+.feature-card-large {
+  background-color: #CDFF3C; /* Bright lime green */
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 30rem;
+  min-height: 25rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.feature-card-large:hover {
+  transform: scale(1.02);
+}
+
+/* Small Rectangle Cards Inside the Large Card */
+.dynamic-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.small-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0.5;
+}
+
+.small-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.small-card-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.small-card-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.small-card-title {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e234c;
+}
+
+/* Right Small Card */
+.feature-card-small {
+  background-color: #CDFF3C; /* Bright lime green */
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 20rem;
+  min-height: 25rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.feature-card-small:hover {
+  transform: scale(1.02);
+}
+
+/* Video Container */
+.video-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card-large, .feature-card-small {
+    width: 100%; /* Adjust width to full width on smaller screens */
+    max-width: 350px; /* Limits the maximum width to keep it manageable on small devices */
+  }
+}
+
+/* Button */
+.button-wrapper {
+  margin-top: 1rem;
+}
+
+.feature-button-small {
+  font-size: 1.5rem;
+  color: #6f52c1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feature-button-small:hover {
+  background-color: #6f52c1;
+  color: #ffffff;
+}
+
+
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  background-image: url("bg2.png");
+}
+
+/* Base styles for the .section */
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container, .text-container {
+  flex: 1;
+}
+
+.image-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align the children */
+  }
+
+  .image-container, .text-container {
+    width: 100%; /* Full width for both children */
+  }
+
+  .image-container {
+    height: auto; /* Auto height for better aspect ratio control */
+    order: -1; /* Display image/video/iframe above text */
+  }
+
+  .text-container {
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+}
+
+
+.section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  flex: 1;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover{
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover !important;
   
+  border-radius: 15px !important;
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-container h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: white;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+}
+
+.text-container p {
+  margin: 10px 0;
+  font-size: 20px;
+  color: white;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+}
+
+.text-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.text-container button:hover {
+  background-color: #555;
+}
+
+/* Animation */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.section:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adjust height as needed */
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  
+}
+
+.footer-box {
+  text-align: center;
+  background-image: url('green.png');
+  padding: 14rem 40px;
+  border-radius: 50px !important;
+  position: relative;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+  overflow: hidden;
+  min-height: 645px;
+  min-width: 1205px;
+  
+}
+
+.footer-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+
+  opacity: 1; /* Adjust overlay transparency */
+  z-index: 0;
+}
+
+.footer-box h2 {
+  margin: 0;
+  font-size: 60px;
+  z-index: 1;
+  position: relative;
+  font-family: 'DFVNConstructioGrotesk', sans-serif;
+  color: #13533E;
+}
+
+.footer-box p {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+  color: #13533E;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+
+.instagram-group1 {
+  
+  position:sticky;
+  width: 120px; /* Adjust based on design */
+  height: 100px;
+  margin-bottom: 1.2rem;
+
+}
+
+.instagram-logo1 {
+  margin-left: 0.3rem;
+  width: 100%;
+  height: auto;
+}
+
+.instagram-overlay1 {
+  margin-left: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+
+
+
+.instagram-group1:hover .instagram-overlay1 {
+  transform: rotate(20deg); /* Rotate overlay on hover */
+}
+
+.instagram-overlay1{
+  
+}
+
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transform-style: preserve-3d;
+  
+  
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: rgba(246, 244, 244, 0.2);
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.container .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  color: #fff;
+  opacity: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.container .box:hover .name {
+top: 40px;
+opacity: 1;
+}
+
+.container .box .buy {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform-style: preserve-3d;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  transform: translate3d(-50%,0,80px);
+  width: 120px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 10;
+}
+
+.container .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,-50%,0);
+  max-width: 300px;
+  transition: 0.5s;
+}
+
+.container .box:hover .product {
+  transform: translate3d(-50%,-50%,100px);
+}
